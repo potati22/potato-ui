@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import Unocss from "./config/unocss";
 
 const rollupOptions = {
   // 确保外部化处理那些你不想打包进库的依赖
@@ -13,7 +14,7 @@ const rollupOptions = {
 };
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), Unocss()],
   // 添加库模式配置
   build: {
     rollupOptions,
@@ -22,7 +23,7 @@ export default defineConfig({
       entry: "./src/entry.ts",
       name: "PotatoUI",
       fileName: "potato-ui",
-      formats: ["es", "umd"],
+      formats: ["es", "umd", "iife"],
     },
   },
 });
