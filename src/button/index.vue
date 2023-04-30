@@ -14,12 +14,13 @@
           transition duration-300 ease-in-out transform hover:scale-105
           mx-1`"
   >
+    <i v-if="props.icon" :class="`i-ic-baseline-${props.icon} p-3`"></i>
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts" setup>
-import { defineProps, PropType } from "vue";
+import { PropType } from "vue";
 type ISize = "small" | "medium" | "large";
 type IColor =
   | "black"
@@ -64,6 +65,10 @@ const props = defineProps({
   plain: {
     type: Boolean,
     default: false,
+  },
+  icon: {
+    type: String,
+    default: "",
   },
 });
 </script>
