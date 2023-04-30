@@ -29,5 +29,5 @@
 
 <script setup>
 // import { PButton, SFCInput } from "../dist/potato-ui.esm";
-import PButton from "./button/index.vue";
+import PButton from './button/index.vue'
 </script>

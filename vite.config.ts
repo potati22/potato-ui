@@ -23,7 +23,7 @@ export default defineConfig({
       entry: "./src/entry.ts",
       name: "PotatoUI",
       fileName: "potato-ui",
-      formats: ["esm", "umd", "iife"],
+      formats: ["umd", "iife", "es"],
     },
   },
   test: {

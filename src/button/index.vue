@@ -20,43 +20,43 @@
 </template>
 
 <script lang="ts" setup>
-import { PropType } from "vue";
-type ISize = "small" | "medium" | "large";
+import { PropType } from 'vue'
+type ISize = 'small' | 'medium' | 'large'
 type IColor =
-  | "black"
-  | "gray"
-  | "red"
-  | "yellow"
-  | "green"
-  | "blue"
-  | "indigo"
-  | "purple"
-  | "pink";
+  | 'black'
+  | 'gray'
+  | 'red'
+  | 'yellow'
+  | 'green'
+  | 'blue'
+  | 'indigo'
+  | 'purple'
+  | 'pink'
 const size = {
   small: {
-    x: "2",
-    y: "1",
-    text: "sm",
+    x: '2',
+    y: '1',
+    text: 'sm',
   },
   medium: {
-    x: "3",
-    y: "1.5",
-    text: "base",
+    x: '3',
+    y: '1.5',
+    text: 'base',
   },
   large: {
-    x: "4",
-    y: "2",
-    text: "lg",
+    x: '4',
+    y: '2',
+    text: 'lg',
   },
-};
+}
 const props = defineProps({
   size: {
     type: String as PropType<ISize>,
-    default: "medium",
+    default: 'medium',
   },
   color: {
     type: String as PropType<IColor>,
-    default: "blue",
+    default: 'blue',
   },
   round: {
     type: Boolean,
@@ -68,7 +68,7 @@ const props = defineProps({
   },
   icon: {
     type: String,
-    default: "",
+    default: '',
   },
-});
+})
 </script>
